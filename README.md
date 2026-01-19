@@ -1,58 +1,46 @@
 # 🚀 DevOps CI/CD Pipeline Deployment on AWS EC2 (Docker + GitHub Actions)
 
-This repository contains a complete **DevOps CI/CD project** where a Dockerized web application is automatically deployed to an **AWS EC2 instance** using **GitHub Actions**.
+This project demonstrates a complete **DevOps CI/CD pipeline** where a static website is automatically deployed to an **AWS EC2 instance** using **GitHub Actions** and runs inside an **Nginx Docker container**.
 
-✅ Every push to the `main` branch triggers an automated deployment pipeline.
+✅ Every push to the `main` branch triggers a deployment automatically.
+
+---
+
+## 🌐 Live Demo
+**Live URL:** http://13.239.136.115
 
 ---
 
 ## 📌 Project Overview
 
-This project demonstrates a real-world DevOps workflow:
-
-1. Developer pushes code to GitHub  
-2. GitHub Actions pipeline triggers automatically  
-3. Pipeline connects to AWS EC2 via SSH  
-4. Latest code is pulled on the server  
-5. Docker Compose builds and deploys the application  
-6. Application is served live using **Nginx (inside Docker)**
+### What happens in this project?
+1. Code is pushed to GitHub (`main` branch)
+2. GitHub Actions pipeline triggers automatically
+3. GitHub Actions connects to AWS EC2 via SSH
+4. EC2 pulls the latest repository code
+5. Website is deployed using Docker + Nginx container
+6. Website becomes live on EC2 public IP on port `80`
 
 ---
 
 ## 🧰 Tech Stack
 
-- **GitHub Actions** – CI/CD pipeline
-- **Docker** – Containerization
-- **Docker Compose** – Service deployment & container lifecycle management
-- **AWS EC2 (Ubuntu)** – Cloud server hosting
-- **Nginx** – Web server used inside container
-- **SSH + GitHub Secrets** – Secure remote deployment
+- **GitHub Actions** (CI/CD Automation)
+- **AWS EC2** (Cloud Server)
+- **Amazon Linux 2023** (Server OS)
+- **Docker** (Container Runtime)
+- **Nginx (Docker Image)** (Web Server)
+- **SSH + GitHub Secrets** (Secure Authentication)
 
 ---
 
 ## ✅ Features Implemented
 
-✅ Automated deployment on every push (`main` branch)  
-✅ Dockerized web application deployment  
-✅ Secure deployment using SSH keys stored in GitHub Secrets  
-✅ Docker Compose used for easy production-like deployment  
-✅ Restart policy enabled for reliability  
-✅ Container health check added for monitoring
-
----
-
-## ⚙️ CI/CD Workflow (How It Works)
-
-### Trigger:
-- GitHub Actions runs automatically on:
-  - `push` to `main`
-
-### Pipeline steps:
-- Checkout repository code
-- Connect to AWS EC2 via SSH
-- Install required packages (Docker + Docker Compose)
-- Clone latest repository code on EC2
-- Run deployment using Docker Compose
+✅ CI/CD pipeline triggered on every push to `main`  
+✅ Secure deployment using GitHub Secrets (`EC2_HOST`, `EC2_USER`, `EC2_KEY`)  
+✅ Nginx container deployment with port mapping `80:80`  
+✅ Website served instantly from EC2 public IP  
+✅ Fully resume-ready end-to-end DevOps workflow  
 
 ---
 
@@ -62,10 +50,9 @@ This project demonstrates a real-world DevOps workflow:
 devops-cicd-ec2/
 │
 ├── index.html
-├── Dockerfile
 ├── docker-compose.yml
+├── README.md
 │
 └── .github/
     └── workflows/
         └── deploy.yml
-
