@@ -255,13 +255,13 @@
 
         <p class="subtitle">
           This project demonstrates a complete DevOps workflow:
-          code pushed to GitHub automatically triggers a pipeline that builds a Docker image and deploys it on an AWS EC2 instance.
+          code pushed to GitHub automatically triggers a pipeline that deploys the latest version on an AWS EC2 instance.
         </p>
 
         <div class="pill-row">
           <div class="pill"><strong>Trigger:</strong> Git Push</div>
-          <div class="pill"><strong>CI:</strong> Build Docker Image</div>
-          <div class="pill"><strong>CD:</strong> Deploy on EC2</div>
+          <div class="pill"><strong>CI/CD:</strong> GitHub Actions</div>
+          <div class="pill"><strong>Deploy:</strong> AWS EC2</div>
           <div class="pill"><strong>Status:</strong> Running ✅</div>
         </div>
       </div>
@@ -281,21 +281,21 @@
               <span class="tick">
                 <svg viewBox="0 0 24 24"><path d="M20.285 6.709l-11.01 11.01-5.56-5.56 1.414-1.414 4.146 4.146 9.596-9.596z"/></svg>
               </span>
-              Containerized deployment using Docker
+              Dockerized deployment using Nginx container
             </li>
 
             <li>
               <span class="tick">
                 <svg viewBox="0 0 24 24"><path d="M20.285 6.709l-11.01 11.01-5.56-5.56 1.414-1.414 4.146 4.146 9.596-9.596z"/></svg>
               </span>
-              Hosted on AWS EC2 with Nginx server
+              Hosted on AWS EC2 with HTTP access enabled
             </li>
 
             <li>
               <span class="tick">
                 <svg viewBox="0 0 24 24"><path d="M20.285 6.709l-11.01 11.01-5.56-5.56 1.414-1.414 4.146 4.146 9.596-9.596z"/></svg>
               </span>
-              Secure deployment using SSH + Secrets
+              Secure deployment using SSH + GitHub Secrets
             </li>
           </ul>
         </div>
@@ -303,7 +303,7 @@
         <div class="card">
           <h3>Deployment Info</h3>
           <ul>
-            <li>✅ Environment: <b>Ubuntu EC2</b></li>
+            <li>✅ Environment: <b>Amazon Linux 2023 EC2</b></li>
             <li>✅ Web Server: <b>Nginx</b></li>
             <li>✅ Container Runtime: <b>Docker</b></li>
             <li>✅ Pipeline: <b>GitHub Actions</b></li>
@@ -315,7 +315,7 @@
     <div class="footer">
       <div>Made for Resume • DevOps Project • 2026</div>
 
-      <a class="btn" href="https://github.com/" target="_blank">
+      <a class="btn" href="https://github.com/vibudhan/devops-cicd-ec2" target="_blank">
         <svg viewBox="0 0 24 24">
           <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.55-3.88-1.55-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.73-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.28 1.2-3.09-.12-.3-.52-1.5.11-3.12 0 0 .98-.31 3.2 1.18.93-.26 1.93-.39 2.92-.39.99 0 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.62.23 2.82.11 3.12.75.81 1.2 1.83 1.2 3.09 0 4.43-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.13 0 1.54-.02 2.78-.02 3.16 0 .31.21.67.8.56 4.57-1.53 7.85-5.86 7.85-10.96C23.5 5.74 18.27.5 12 .5z"/>
         </svg>
@@ -326,4 +326,3 @@
   </div>
 </body>
 </html>
-
