@@ -13,12 +13,9 @@ This project demonstrates a complete **DevOps CI/CD pipeline** where a static po
 
 ## 🖼️ Screenshots
 
-### ✅ Website Output (Live on EC2)
-![Uploading image.png…]()
-
-
-### ✅ GitHub Actions Deployment Success
+![Website Output](screenshots/website-output.png)
 ![GitHub Actions Success](screenshots/github-actions-success.png)
+
 
 ---
 
