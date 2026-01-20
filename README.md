@@ -6,11 +6,6 @@ This project demonstrates a complete **DevOps CI/CD pipeline** where a static po
 
 ---
 
-## 🌐 Live Demo
-✅ **Live URL:** http://13.239.136.115
-
----
-
 ## 🖼️ Screenshots
 
 ![Website Output](screenshots/website-output.png)
